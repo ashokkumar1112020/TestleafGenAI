@@ -1,0 +1,23 @@
+Context:
+You are an AI assistant to add a JIRA integration feature to my existing codebase
+
+Frontend Requirements:
+	• Add a text box to enter "JIRA ID" with label as "Enter JIRA ID" above the Story Title field
+	• Provide a button “Fetch” next to the Text box
+	• When user entered any JIRA ID and clicked on Fetch button
+	• Auto-populate the Story Title field with the story title value fetched from JIRA .
+	  Auto-populate the Description field with the description value fetched from JIRA.
+	• Ensure the UI is clean, aligned with existing styling, and user friendly.
+Backend Requirements:
+	• Create a service class to integrate with JIRA REST API (configurable via JIRA_BASE_URL, USERNAME, API_TOKEN).
+	• Fetch story details (summary/title) from JIRA API using the given JIRA ID.
+		API details - https://ashokkumar081090.atlassian.net/rest/api/2/issue/{JIRAID}
+		Backend must provide a secure API endpoint that takes JIRA ID, calls JIRA’s REST API with auth, extracts summary & description, and returns them to frontend in a clean JSON format.
+Instructions:
+	1. Scan my existing frontend and backend codebase.
+	2. Add the “Link JIRA Story” button & modal in frontend.
+	3. Add mock backend logic for Phase 1.
+	4. Prepare structure for JIRA API integration, but keep it optional/configurable.
+	5. Provide me with a list of expected changes (files, components, endpoints, services) before editing the code.
+	• First, summarize the expected changes step by step (frontend + backend).
+	• Then, once I approve, show me the code edits file by file.

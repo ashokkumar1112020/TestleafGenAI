@@ -1,0 +1,44 @@
+[CONTEXT]:  
+You are my coding assistant inside VS Code. I already have a working web application.  
+Your task is to **add a new feature called "Test Data Generator" without breaking existing functionality**.  
+
+[NEW FEATURE REQUIREMENTS]:  
+- Add a new tab/section in the app called **"Test Data Generator"**.  
+
+[UI REQUIREMENTS]:  
+1. **Field Name** → Textbox with label above it (required).  
+2. **Field Type** → Dropdown with label above it (options: string, number, integer, decimal, email, phone number, date, name, address, etc.).  
+   - Field Name + Field Type should be on the same horizontal line.  
+3. **Add Another Field** → Button below Field Name & Field Type to dynamically add another row.  
+4. **Generate** → Button next to "Add Another Field".  
+
+[BEHAVIOR REQUIREMENTS]:  
+- **Validation**: Field Name is required.  
+- **Smart Suggestions**: If Field Name contains certain keywords, auto-suggest relevant Field Types. Example:  
+  - "phone" → suggest phone number, string  
+  - "name" → suggest string, name  
+  - "email" → suggest email, string  
+- **Generate Action**: When clicked, generate **up to 5 rows of realistic test data** for each field.  
+
+[REALISTIC TEST DATA RULES]:  
+- **Name** → Generate realistic first & last names.  
+- **Email** → Generate unique, valid email addresses (e.g., `john.doe@example.com`).  
+- **Phone Number** → Generate 10-digit random numbers.  
+- **Date** → Generate random but valid dates in `YYYY-MM-DD` format.  
+- **Address** → Generate realistic addresses with street, city, country.  
+- **Number/Integer** → Random integers in a sensible range (e.g., 1–10000).  
+- **Decimal** → Random decimal values with 2–3 decimal places.  
+- **String** → Random alphanumeric values (length 5–15).  
+
+[EXPECTED FLOW]:  
+1. User adds fields (Field Name + Field Type).  
+2. User clicks **Generate**.  
+3. A table is shown below with **columns as Field Names** and **rows filled with 5 test data entries**.  
+
+[IMPORTANT]:  
+- Do **NOT modify any existing code**. Keep this feature isolated.  
+- Make the implementation **modular and extensible** so new field types can be added easily.  
+
+[DELIVERABLE]:  
+1. First, provide the **list of expected code changes** (frontend components, backend API changes if needed).  
+2. Then, implement the feature with realistic data generation logic.  
